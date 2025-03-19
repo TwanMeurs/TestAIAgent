@@ -3,13 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Chatbot Test</title>
+    <title>AI Chatbot</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
 </head>
 <body>
     <div class="chat-container">
         <h3>AI Chatbot</h3>
-        <iframe src="https://bot.dialogflow.com/ac7682f1-2c28-47ff-a970-5379a2695003" allow="microphone;"></iframe>
+        <df-messenger
+          intent="WELCOME"
+          chat-title="Evi"
+          agent-id="ac7682f1-2c28-47ff-a970-5379a2695003"
+          language-code="en">
+        </df-messenger>
     </div>
 </body>
 </html>
