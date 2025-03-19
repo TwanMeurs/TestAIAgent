@@ -1,6 +1,6 @@
 body {
     font-family: 'Arial', sans-serif;
-    background: linear-gradient(to right, #667eea, #764ba2);
+    background: #F4A900; /* Everience Yellow */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -13,6 +13,7 @@ body {
 
 .header {
     margin-bottom: 20px;
+    color: #DC0256; /* Everience Pink */
 }
 
 h1 {
@@ -26,11 +27,14 @@ p {
 }
 
 df-messenger {
-    --df-messenger-bot-message: #667eea;
-    --df-messenger-user-message: #764ba2;
+    --df-messenger-bot-message: #0096D6; /* Everience Blue */
+    --df-messenger-user-message: #DC0256; /* Everience Pink */
     --df-messenger-chat-background: #ffffff;
-    --df-messenger-button-titlebar-color: #667eea;
+    --df-messenger-button-titlebar-color: #0096D6;
     --df-messenger-send-icon: #ffffff;
+    --df-messenger-chat-icon: url('images/Evi_AI_Assistant_Transparent.png');
+    --df-messenger-chat-icon-size: 70px;
+    --df-messenger-font-family: 'Arial', sans-serif;
     position: fixed;
     bottom: 20px;
     right: 20px;
@@ -38,13 +42,11 @@ df-messenger {
     height: 500px;
     border-radius: 10px;
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
-    overflow: hidden; /* Ensures no extra UI elements appear */
+    overflow: hidden;
 }
 
-/* Remove border around chat text box and right-side rectangle */
+/* Remove border around chat text box */
 df-messenger-chat {
     border: none !important;
     box-shadow: none !important;
-    width: auto !important;
-    height: auto !important;
 }
