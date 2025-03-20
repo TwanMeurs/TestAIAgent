@@ -39,3 +39,15 @@ df-messenger::part(message) {
     padding: 10px 15px !important;
     border-radius: 15px !important;
 }
+
+.qr-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.qr-code {
+    width: 200px; /* Adjust size as needed */
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
