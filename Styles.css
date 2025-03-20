@@ -27,8 +27,15 @@ p {
 
 df-messenger {
     --df-messenger-bot-message: #667eea;
-    --df-messenger-user-message: #764ba2;
+    --df-messenger-user-message: #0096D6; /* Changed user message color to blue */
     --df-messenger-chat-background: #ffffff;
     --df-messenger-button-titlebar-color: #667eea;
     --df-messenger-send-icon: #ffffff;
+}
+
+/* Make message bubbles adjust dynamically to message size */
+df-messenger::part(message) {
+    max-width: fit-content !important;
+    padding: 10px 15px !important;
+    border-radius: 15px !important;
 }
