@@ -36,10 +36,18 @@
   </div>
 
   <script>
-    document.addEventListener("click", function () {
+    document.addEventListener("click", function (event) {
       const qr = document.getElementById("qrContainer");
-      qr.style.display = "block";
-    }, { once: true }); // ensures it runs only once
+      const chatbot = document.querySelector("df-messenger");
+  
+      // Check if the click was outside the chatbot
+      if (!chatbot.contains(event.target)) {
+        qr.style.display = "block";
+        // Remove listener after first valid click
+        document.removeEventListener("click", arguments.callee);
+      }
+    });
   </script>
+  
 </body>
 </html>
