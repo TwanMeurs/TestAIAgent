@@ -1,31 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Chatbot</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AI Chatbot</title>
+  <link rel="stylesheet" href="styles.css"/>
+  <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
+  <style>
+    .qr-container {
+      display: none;
+      text-align: center;
+      margin-top: 20px;
+    }
+  </style>
 </head>
 <body>
-    <div class="header">
-        <h1>Welcome to Evi - Your Onboarding Assistant</h1>
-        <p>Here to guide you through your onboarding process at Everience.</p>
-    </div>
-    
-    <div class="chat-container">
-        <df-messenger
-          intent="WELCOME"
-          chat-title="Evi"
-          agent-id="ac7682f1-2c28-47ff-a970-5379a2695003"
-          language-code="en"
-          chat-icon="images/Evi_AI_Assistant_Converted.png">
-        </df-messenger>
-    </div>
-    
-    <div class="qr-container">
-        <p>Scan the QR code to test the chatbot on your device:</p>
-        <img src="images/qr.png" alt="Chatbot QR Code" class="qr-code">
-    </div>
+  <div class="header">
+    <h1>Welcome to Evi - Your Onboarding Assistant</h1>
+    <p>Here to guide you through your onboarding process at Everience.</p>
+  </div>
+
+  <div class="chat-container">
+    <df-messenger
+      intent="WELCOME"
+      chat-title="Evi"
+      agent-id="ac7682f1-2c28-47ff-a970-5379a2695003"
+      language-code="en"
+      chat-icon="images/Evi_AI_Assistant_Converted.png">
+    </df-messenger>
+  </div>
+
+  <div class="qr-container" id="qrContainer">
+    <p>Scan the QR code to test the chatbot on your device:</p>
+    <img src="images/qr.png" alt="Chatbot QR Code" class="qr-code">
+  </div>
+
+  <script>
+    document.addEventListener("click", function () {
+      const qr = document.getElementById("qrContainer");
+      qr.style.display = "block";
+    }, { once: true }); // ensures it runs only once
+  </script>
 </body>
 </html>
